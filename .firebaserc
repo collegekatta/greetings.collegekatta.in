@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "ck-osps",
+    "ck-wishes": "ck-osps"
+  },
+  "targets": {},
+  "etags": {}
+}

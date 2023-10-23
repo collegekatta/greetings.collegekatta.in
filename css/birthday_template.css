@@ -1,0 +1,73 @@
+
+#ck_countdown {
+    text-align: center;
+    font-size: 20px;
+}
+
+#ck_countdown .timer-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ck_countdown .timer-element {
+    margin: 10px;
+    padding: 5px;
+    background-color: var(--color-dark-1);
+    /* Change the background color */
+    color: #fff;
+    /* Change the text color */
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(122, 30, 30, 0.5), 0 0 20px rgba(10, 167, 70, 0.5);
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+}
+
+#ck_countdown .timer-number {
+    font-size: 24px;
+}
+
+#ck_countdown .timer-label {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+#ck_countdown .timer-element:nth-child(even){
+    animation: glowing 1s linear infinite;
+}
+
+#ck_countdown .timer-element:nth-child(odd){
+    animation: glowing1 1s linear infinite;
+}
+
+/* Add the glowing effect using keyframes animation */
+@keyframes glowing {
+    0% {
+        box-shadow: 0 0 3px #fff, 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0ba9ca, 0 0 20px #0ba9ca, 0 0 25px #0ba9ca;
+    }
+
+    50% {
+        box-shadow: 0 0 5px 8px rgba(163, 8, 86, 0.5), 0 0 5px 8px rgba(228, 214, 16, 0.5);
+    }
+
+    100% {
+        box-shadow: 0 0 3px #fff, 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0ba9ca, 0 0 20px #0ba9ca, 0 0 25px #0ba9ca;
+    }
+}
+
+/* Add the glowing effect using keyframes animation */
+@keyframes glowing1 {
+    0% {
+        box-shadow: 0 0 3px #fff, 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0ba9ca, 0 0 20px #0ba9ca, 0 0 25px #0ba9ca;
+    }
+
+    50% {
+        box-shadow: 0 0 5px 8px rgba(3, 255, 57, 0.5), 0 0 5px 8px rgba(241, 1, 53, 0.5);
+    }
+
+    100% {
+        box-shadow: 0 0 3px #fff, 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0ba9ca, 0 0 20px #0ba9ca, 0 0 25px #0ba9ca;
+    }
+}

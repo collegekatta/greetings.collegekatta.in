@@ -1,0 +1,175 @@
+/* font-family: 'EB Garamond', serif; */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+
+/* font-family: 'Cedarville Cursive', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+
+/* font-family: 'Alice', serif; */
+@import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
+
+/* font-family: 'Mea Culpa', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Mea+Culpa&display=swap');
+
+
+
+:root {
+    --color-dark-0: #030917;
+    --color-dark-1: #17182b;
+
+    --color-white: white;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'EB Garamond', serif !important;
+    background: var(--color-dark-0) !important;
+    color: #FFF !important;
+}
+
+#loader {
+    background: var(--color-dark-1) !important;
+}
+
+p, label {
+    font-size: 20px !important;
+}
+
+.text-dark-0 {
+    color: var(--color-dark-0) !important;
+}
+
+.text-dark-1 {
+    color: var(--color-dark-1) !important;
+}
+
+.form-card {
+    border-radius: 18px !important;
+}
+
+.card {
+    background: var(--color-dark-1) !important;
+}
+
+.form-card>* {
+    color: var(--color-white);
+    border: none !important;
+}
+
+.form-card .card-body {
+    z-index: 1;
+    border-radius: 15px;
+}
+
+.heading-timer-end {
+    background: linear-gradient(45deg, #ff000d, #FFA300, #00ffd5);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.gradient-text {
+    background: linear-gradient(45deg, #FF477E, #FFA300);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradient-animation 5s linear infinite;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.form-card::before {
+    border-radius: 15px !important;
+    content: '';
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, var(--color-dark-1), #570527, var(--color-dark-0));
+    background-size: 200% 100%;
+    animation: runningBackground 5s linear infinite;
+}
+
+@keyframes runningBackground {
+    0%, 100% {
+        background-position: 100% 0;
+    }
+
+    50% {
+        background-position: 0 100%;
+    }
+}
+
+
+.genrate-btn {
+    background: linear-gradient(135deg, #00455c, #00455c);
+    color: white !important;
+    border-radius: 10px !important;
+    font-weight: bold !important;
+    text-align: center;
+    transition: all .5s ease-in !important;
+    transform: scale(1);
+}
+
+.genrate-btn:hover {
+    transform: scale(1.1);
+}
+
+#template-container {
+    z-index: 1;
+    position: relative;
+
+}
+
+@keyframes animate {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+#template-container .card {
+    width: 24rem;
+    overflow: hidden;
+    animation: animate 2.5s infinite;
+    transform: scale(1);
+}
+
+
+@media only screen and (max-width: 769px) {
+    #template-container .card {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    #template-container h1 {
+        font-size: 5rem !important;
+    }
+
+    #template-container h3 {
+        font-size: 2.5rem !important;
+    }
+
+    #template-container h4 {
+        font-size: 2rem !important;
+    }
+
+    #template-container h5 {
+        font-size: 1.7rem !important;
+    }
+}
